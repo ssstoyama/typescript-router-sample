@@ -13,7 +13,7 @@ const App: React.SFC = () => (
   <div className="App">
     <Route exact path="/" component={ComponentA} />
     <Route path="/a" component={ComponentA} />
-    <Route path="/b" render={props => <ComponentB text={'Bのコンポーネント'} {...props} />} />
+    <Route path="/b" render={props => <ComponentB message={'Bのコンポーネント'} {...props} />} />
   </div>
   </BrowserRouter>
 )

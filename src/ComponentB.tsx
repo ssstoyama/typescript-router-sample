@@ -5,16 +5,16 @@ import {
 } from 'react-router-dom'
 
 type MyProps = {
-  text: string
+  message: string
 } & RouteComponentProps
 
 const ComponentB: React.SFC<MyProps> = ({
-  text,
+  message,
   history
 }) => (
   <div>
     <h1>B</h1>
-    <p>{text}</p>
+    <p>{message}</p>
     <button onClick={() => history.push('/a')}>ComponentAへ</button>
   </div>
 )

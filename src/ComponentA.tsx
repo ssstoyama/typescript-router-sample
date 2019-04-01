@@ -1,13 +1,16 @@
 import React from 'react'
 import {
-  Link
+  withRouter,
+  RouteComponentProps
 } from 'react-router-dom'
 
-const ComponentA: React.SFC = () => (
+const ComponentA: React.SFC<RouteComponentProps> = ({
+  history
+}) => (
   <div>
     <h1>A</h1>
-    <Link to="/b">ComponentBへ</Link>
+    <button onClick={() => history.push('/b')}>ComponentBへ</button>
   </div>
 )
 
-export default ComponentA
+export default withRouter(ComponentA)
